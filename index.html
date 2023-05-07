@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <main id="caixa">
+    <section id="calculadora">
+        <form id="formulario">
+            <h1 id="titulo">Calculadora de IMC</h1>
+            <div class="inputCaixa">
+                <label for="peso">Peso(Kg): </label>
+                <input type="number" id="input-peso" required>
+            </div>
+            <div class="inputbox">
+                <label for="altura">Altura(M): </label>
+                <input type="number" id="input-altura" required>
+            </div>
+            <button id="calcular">Calcular</button>
+        </form>
+        <div id="mostrar"></div>
+    </section>
+    </main>
+    <script>
+        var calcular = document.getElementById("calcular");
+        var mostrar = document.getElementById("mostrar");
+
+        function calcularIMC() {
+            var peso = document.getElementById("input-peso").value;
+            var altura = document.getElementById("input-altura").value;
+
+            var num1 = parseFloat(peso);
+            var num2 = parseFloat(altura);
+
+            var imc = num1 / (num2 * num2);
+            imc = imc.toFixed(2);
+            mostrar.innerHTML = "IMC: " + imc;
+        }
+
+        calcular.addEventListener("click", calcularIMC);
+    </script>
+</body>
+</html>

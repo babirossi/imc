@@ -1,0 +1,101 @@
+:root {
+    --cor-principal: rgb(41, 41, 41);
+    --cor-secundaria: rgb(157, 37, 157);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-principal);
+}
+
+#calculadora {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+}
+
+#formulario {  
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 10px;
+}
+
+#titulo {
+    font-size: 2.2em;
+}
+
+.inputCaixa label {
+    color: white;
+    font-weight: 500;
+}
+
+.inputCaixa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: rgb(156, 61, 164);
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 4px;
+}
+
+.inputbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: rgb(156, 61, 164);
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 4px;
+}
+
+.inputbox input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 4px; 
+    outline: none;
+}
+
+.inputCaixa input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 4px;
+    outline: none;
+    display: block;
+}
+
+#calcular {
+    border: none;
+    font-size: 16px; 
+    background-color: rgb(156, 61, 164);
+    color: white;
+    padding: 9px;
+    margin: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#mostrar {
+    margin: 6px;
+    align-items: center;
+    padding: 5px;
+    border-top: 2px solid rgb(176, 173, 173);
+}
+  
