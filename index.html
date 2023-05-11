@@ -39,6 +39,25 @@
             var imc = num1 / (num2 * num2);
             imc = imc.toFixed(2);
             mostrar.innerHTML = "IMC: " + imc;
+
+            if(imc<18.5){
+                mostrar.innerHTML = "Seu IMC é: " + imc + "<br>" + "Você está abaixo o peso ideal"
+            }
+            else if(imc<24.9){
+                mostrar.innerHTML = "Seu IMC é: " + imc + "<br>" + "Você está no peso ideal"
+            }
+            else if(imc<29.9){
+                mostrar.innerHTML = "Seu IMC é: " + imc + "<br>" + "Levemente acima do peso ideal"
+            }
+            else if(imc<34.9){
+                mostrar.innerHTML = "Seu IMC é: " + imc + "<br>" + "Você está na obesidade grau I"
+            }
+            else if(imc<39.9){
+                mostrar.innerHTML = "Seu IMC é: " + imc + "<br>" + "Você está na obesidade grau II"
+            }
+             else if(imc>40){
+                mostrar.innerHTML = "Seu IMC é: " + imc + "<br>" + "Você está na obesidade grau III"
+            }
         }
 
         calcular.addEventListener("click", calcularIMC);
